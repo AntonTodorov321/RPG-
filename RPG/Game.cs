@@ -116,7 +116,14 @@
                         Console.WriteLine($"Remaining Points: {totalPoints}");
                         Console.Write("Add to Strength: ");
 
-                        int strengthPoints = int.Parse(Console.ReadLine());
+                        bool result =
+                            int.TryParse(Console.ReadLine(), out int strengthPoints);
+
+                        if (!result)
+                        {
+                            continue;
+                        }
+
                         if (strengthPoints >= 0 && strengthPoints <= totalPoints)
                         {
                             totalPoints -= strengthPoints;
@@ -135,7 +142,13 @@
                         Console.WriteLine($"Remaining Points: {totalPoints}");
                         Console.Write("Add to Agility: ");
 
-                        int agilityPoints = int.Parse(Console.ReadLine());
+                        bool result =
+                            int.TryParse(Console.ReadLine(), out int agilityPoints);
+
+                        if (!result)
+                        {
+                            continue;
+                        }
 
                         if (agilityPoints >= 0 && agilityPoints <= totalPoints)
                         {
@@ -155,7 +168,13 @@
                         Console.WriteLine($"Remaining Points: {totalPoints}");
                         Console.Write("Add to Intelligence: ");
 
-                        int intelligencePoints = int.Parse(Console.ReadLine());
+                        bool result = 
+                            int.TryParse(Console.ReadLine(), out int intelligencePoints);
+
+                        if (!result)
+                        {
+                            continue;
+                        }
 
                         if (intelligencePoints >= 0 && intelligencePoints <= totalPoints)
                         {
