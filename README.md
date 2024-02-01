@@ -1,2 +1,2 @@
-# RPG-
+# RPG
 Simple console game
